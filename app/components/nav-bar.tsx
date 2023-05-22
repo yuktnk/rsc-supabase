@@ -17,7 +17,7 @@ export default function NavBar() {
           Nested Layout with Blogs
         </Link>
         <Link
-          href="/streamin-sr"
+          href="/streaming-sr"
           className="rounded bg-gray-700 px-3 py-2 text-white hover:bg-gray-500"
         >
           Streaming SR
