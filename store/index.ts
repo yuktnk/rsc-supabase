@@ -13,7 +13,7 @@ type LoginUser = {
 type State = {
   editedTask: EditedTask
   updateEditedTask: (payload: EditedTask) => void
-  resertEditedTask: () => void
+  resetEditedTask: () => void
 
   loginUser: LoginUser
   updateLoginUser: (payload: LoginUser) => void
@@ -26,7 +26,7 @@ const useStore = create<State>((set) => ({
     set({
       editedTask: payload,
     }),
-  resertEditedTask: () => set({ editedTask: { id: '', title: '' } }),
+  resetEditedTask: () => set({ editedTask: { id: '', title: '' } }),
 
   loginUser: { id: '', email: '' },
   updateLoginUser: (payload) =>
