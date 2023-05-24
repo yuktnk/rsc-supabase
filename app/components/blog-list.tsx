@@ -1,9 +1,8 @@
 import type { Database } from '@/database.types'
-import { resolve } from 'path'
 
 type Blog = Database['public']['Tables']['blogs']['Row']
 
-const fetchBlogs = async () => {
+async function fetchBlogs() {
   await new Promise((resolve) => setTimeout(resolve, 6000))
 
   const res = await fetch(`${process.env.url}/rest/v1/blogs?select=*`, {
